@@ -1,0 +1,106 @@
+{% extends "base.html"%}
+{% load static%}
+{% block content%}
+<div class="container mt-5 mb-5">
+	<div class="row">
+		<div class="col-md-2">
+			<div class="row">
+				<div class="col">
+					<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+						<button class="">
+							<a class="nav-link flex-column nav-pills" href="{% url 'cart'%}">View Cart <span>{{ order.get_cart_items }}</span></a>
+						</button>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-10">
+			<div class="row  mb-2">
+				{% for product in products%}					
+					<div class="col-md-4 card m-3">
+							<div class="">
+								<img src="{{product.image.url}}" class="card-img-top" alt="..." width="200" height="200">
+								<div class="card-body">
+								<h6 class="card-title text-center">{{product.name}}</h6>
+								<!-- <p class="card-text " >{{product.description }} </p> -->
+								<small>
+									<button>
+										<a href=""><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+									</button>
+									<button data-product="{{product.id}}" data-action="add" class="update-cart">
+											<i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+									</button>
+								</small>
+								
+								<a href="#" class="btn btn-primary">KShs.{{product.price|floatformat:2}}</a>
+								</div>
+							</div>
+					</div>
+				{% endfor %}
+				
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+<section class="footer">
+	<div class="container-fluid  " style="background-color: #f72585;">
+		<footer class="text-center text-white ">
+			<div class="container-fluid">
+				<section class="">
+					<div class="row text-center d-flex justify-content-center">
+						<div class="col-md-3">
+							<h6 class="text-uppercase font-weight-bold">
+								<a href="mailto: edwikenyasuguta@gmail.com" target="_blank" class="text-white"><i
+										class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
+							</h6>
+						</div>
+
+						<div class="col-md-3">
+							<h6 class="text-uppercase font-weight-bold">
+								<a href="http://wa.me/+254718013941" target="_blank" class="text-white"><i
+										class="fab fa-whatsapp fa-2x"></i></i>
+								</a>
+							</h6>
+						</div>
+
+						<div class="col-md-3">
+							<h6 class="text-uppercase font-weight-bold">
+								<a href="https://github.com/Edwike12" target="_blank" class="text-white"><i
+										class="fab fa-github fa-2x"></i></i></a>
+							</h6>
+						</div>
+
+						<div class="col-md-3">
+							<h6 class="text-uppercase font-weight-bold">
+								<a href="https://www.facebook.com/edwinata.nyaunchiano" target="_blank"
+									class="text-white"><i class="fab fa-facebook fa-2x"></i></a>
+							</h6>
+						</div>
+
+					</div>
+					<section class="">
+						<div class="row d-flex justify-content-center">
+							<div class="col">
+								<p>
+
+								</p>
+							</div>
+						</div>
+					</section>
+
+			</div>
+
+			<div style="background-color: #f72585;">
+				© 2022 Copyright:
+				<a class="text-white" href="/">EBParlour.com</a>
+			</div>
+
+		</footer>
+
+	</div>
+</section>
+
+{%endblock %}
