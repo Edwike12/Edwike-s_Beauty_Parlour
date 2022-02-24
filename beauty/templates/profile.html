@@ -3,14 +3,15 @@
 
 <br> <br> <br>
 <section class="container profile">
-    <div class="row">
-        <div class="col-md-6">
+    <div>
+        <div class="">
             <div class="card text-left">
                 {% if profile.profile_photo %}
-                <img src="{{user.profile.profile_photo.url}}" alt="" style="border-radius: 50%; width: 200px; height: 200px;">
+                <img src="{{user.profile.profile_photo.url}}" alt=""
+                    style="border-radius: 50%; width: 200px; height: 200px;">
                 {%else%}
                 <img src="https://st2.depositphotos.com/1104517/11965/v/600/depositphotos_119659092-stock-illustration-male-avatar-profile-picture-vector.jpg"
-                    class="card-img-top" alt="My profile picture">
+                    class="card-img-top" alt="My profile picture"  style="border-radius: 50%; width: 200px; height: 200px;">
                 {% endif %}
                 <div class="card-body">
                     <p>Name: {{ profile.name }}</p>
@@ -23,7 +24,7 @@
 
                 </div>
             </div>
-            <div class="col-md-6 text-center">
+            <div class="col-md-6 text-center mb-3 mt-3">
                 <div class="row">
                     <div class="col-md-6 details">
                         <div class="first">
@@ -34,12 +35,69 @@
                                 </a>
                             </div>
                         </div>
-                       
+
                     </div>
 
-        </div>
-    </div>
+                </div>
+            </div>
+</section>
 
+<section class="footer">
+    <div class="container-fluid  " style="background-color: #f72585;">
+        <footer class="text-center text-white ">
+            <div class="container-fluid">
+                <section class="">
+                    <div class="row text-center d-flex justify-content-center">
+                        <div class="col-md-3">
+                            <h6 class="text-uppercase font-weight-bold">
+                                <a href="mailto: edwikenyasuguta@gmail.com" target="_blank" class="text-white"><i
+                                        class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
+                            </h6>
+                        </div>
+
+                        <div class="col-md-3">
+                            <h6 class="text-uppercase font-weight-bold">
+                                <a href="http://wa.me/+254718013941" target="_blank" class="text-white"><i
+                                        class="fab fa-whatsapp fa-2x"></i></i>
+                                </a>
+                            </h6>
+                        </div>
+
+                        <div class="col-md-3">
+                            <h6 class="text-uppercase font-weight-bold">
+                                <a href="https://github.com/Edwike12" target="_blank" class="text-white"><i
+                                        class="fab fa-github fa-2x"></i></i></a>
+                            </h6>
+                        </div>
+
+                        <div class="col-md-3">
+                            <h6 class="text-uppercase font-weight-bold">
+                                <a href="https://www.facebook.com/edwinata.nyaunchiano" target="_blank"
+                                    class="text-white"><i class="fab fa-facebook fa-2x"></i></a>
+                            </h6>
+                        </div>
+
+                    </div>
+                    <section class="">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col">
+                                <p>
+
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+            </div>
+
+            <div style="background-color: #f72585;">
+                © 2022 Copyright:
+                <a class="text-white" href="/">EBParlour.com</a>
+            </div>
+
+        </footer>
+
+    </div>
 </section>
 
 
