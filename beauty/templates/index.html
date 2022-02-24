@@ -1,1 +1,75 @@
-<h1>Welcome to Edwike,s Beauty Parlour</h1>
+{% extends 'base.html'%}
+{% load bootstrap4 %}
+{% block content%}
+<style>
+    body{
+        font-family: 'Lato', global_font_string;
+        font-weight: 500;
+        background-image: url("static/images/website_banners__81586.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 100vh;
+    }
+</style>
+
+<h1 class="text-center text-white mt-5" style=" font-weight: 900; font-size: 70px;">Welcome to Edwike,s Beauty Parlour</h1>
+
+<section class="footer">
+    <div class="container-fluid fixed-bottom " style="background-color: #f72585;">
+        <footer class="text-center text-white ">
+            <div class="container-fluid">
+                <section class="">
+                    <div class="row text-center d-flex justify-content-center">
+                        <div class="col-md-3">
+                            <h6 class="text-uppercase font-weight-bold">
+                                <a href="mailto: edwikenyasuguta@gmail.com" target="_blank" class="text-white"><i
+                                        class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
+                            </h6>
+                        </div>
+
+                        <div class="col-md-3">
+                            <h6 class="text-uppercase font-weight-bold">
+                                <a href="http://wa.me/+254718013941" target="_blank" class="text-white"><i
+                                        class="fab fa-whatsapp fa-2x"></i></i>
+                                </a>
+                            </h6>
+                        </div>
+
+                        <div class="col-md-3">
+                            <h6 class="text-uppercase font-weight-bold">
+                                <a href="https://github.com/Edwike12" target="_blank" class="text-white"><i
+                                        class="fab fa-github fa-2x"></i></i></a>
+                            </h6>
+                        </div>
+
+                        <div class="col-md-3">
+                            <h6 class="text-uppercase font-weight-bold">
+                                <a href="https://www.facebook.com/edwinata.nyaunchiano" target="_blank"
+                                    class="text-white"><i class="fab fa-facebook fa-2x"></i></a>
+                            </h6>
+                        </div>
+
+                    </div>
+                    <section class="">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col">
+                                <p>
+
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+            </div>
+
+            <div style="background-color: #f72585;">
+                © 2022 Copyright:
+                <a class="text-white" href="/">EBParlour.com</a>
+            </div>
+
+        </footer>
+
+    </div>
+</section>
+{% endblock %}
